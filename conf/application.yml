@@ -1,0 +1,25 @@
+server:
+  port: 5020
+
+spring:
+  application:
+    name: cam-config-server
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://codex.cro.st.com/plugins/git/cce/cam-config-repo
+          username: ENC(s9l6adWRWbBNvFxCITOwDSM7wG6bQQAy65xEJmifHSNnuXITTUon4/VQWoo7WHPx)
+          password: ENC(+pUex1xch7qTJ3c2vht3YFA/dnY/MDYLv7V2YKhClWmEKneHZOR+ka55FRAXgPlXcIrKWUrT+NnS5LM2Y82GQw==)
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+    
